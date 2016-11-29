@@ -3,6 +3,8 @@
 
 ![](https://raw.githubusercontent.com/tuxtof/freebox-monitoring/master/screenshot.png)
 
+test done on Freebox v5/crystal, seems not working with freebox revolution
+
 ###prerequisites:
 - telegraf
 - influxdb
