@@ -72,7 +72,7 @@ print "freebox uptime=%i,version=\"%s\",state=\"%s\",proto=\"%s\""  % (uptime, v
 print "freebox,type=debit down=%s,up=%s" % (debitd,debitu)
 print "freebox,type=bruit down=%s,up=%s" % (bruitd, bruitu)
 print "freebox,type=attenuation down=%s,up=%s" % (attenuationd, attenuationu)
-print "freebox,type=FED down=%s,up=%s" % (fecd, fecu)
+print "freebox,type=FEC down=%s,up=%s" % (fecd, fecu)
 print "freebox,type=CRC down=%s,up=%s" % (crcd, crcu)
 print "freebox,type=HEC down=%s,up=%s" % (hecd, hecu)
 print "freebox,type=journal down=%s,up=%s" % (debitcond, debitconu)
