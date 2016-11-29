@@ -1,7 +1,7 @@
 [freebox-monitoring](https://github.com/tuxtof/freebox-monitoring)
 ================
 
-![](https://raw.githubusercontent.com/tuxtof/freebox-monitoring/master/fbx-info.py/screenshot.png)
+![](https://raw.githubusercontent.com/tuxtof/freebox-monitoring/master/screenshot.png)
 
 ###prerequisites:
 - telegraf
