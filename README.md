@@ -3,7 +3,7 @@
 
 ![](https://raw.githubusercontent.com/tuxtof/freebox-monitoring/master/screenshot.png)
 
-test done on Freebox v5/crystal, seems not working with freebox revolution
+test done on Freebox v5/crystal, not working with freebox revolution (a revolution version is coming)
 
 ###prerequisites:
 - telegraf
