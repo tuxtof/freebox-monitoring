@@ -13,6 +13,7 @@ telegraf:
     - influxdb
   volumes:
     - ./freebox.conf:/etc/telegraf/telegraf.conf:ro
+    - ./fbx-info.py:/etc/telegraf/fbx-info.py:ro
 
 grafana:
   image: grafana/grafana:latest
