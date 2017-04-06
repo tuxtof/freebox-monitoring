@@ -1,48 +1,12 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_FREEBOX",
-      "label": "freebox",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "4.2.0"
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "1.0.0"
-    },
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": ""
-    }
-  ],
   "annotations": {
     "list": []
   },
-  "editable": false,
+  "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
   "hideControls": false,
-  "id": null,
+  "id": 2,
   "links": [],
   "refresh": "1m",
   "rows": [
@@ -59,7 +23,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_FREEBOX}",
+          "datasource": "freebox",
           "editable": true,
           "error": false,
           "format": "none",
@@ -148,7 +112,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_FREEBOX}",
+          "datasource": "freebox",
           "editable": true,
           "error": false,
           "format": "none",
@@ -237,7 +201,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_FREEBOX}",
+          "datasource": "freebox",
           "editable": true,
           "error": false,
           "format": "none",
@@ -326,7 +290,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_FREEBOX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -422,7 +386,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_FREEBOX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -573,7 +537,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_FREEBOX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -724,7 +688,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_FREEBOX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -897,7 +861,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_FREEBOX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -1242,6 +1206,6 @@
     ]
   },
   "timezone": "browser",
-  "title": "Freebox",
-  "version": 0
+  "title": "Freebox Copy",
+  "version": 9
 }
