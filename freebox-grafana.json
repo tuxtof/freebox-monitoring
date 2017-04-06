@@ -41,7 +41,7 @@
   "editable": false,
   "gnetId": null,
   "graphTooltip": 0,
-  "hideControls": true,
+  "hideControls": false,
   "id": null,
   "links": [],
   "refresh": "1m",
@@ -676,7 +676,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Statistics Bruit / AttÃ©nuation",
+          "title": "Statistics Bruit / Attenuation",
           "tooltip": {
             "msResolution": false,
             "shared": true,
@@ -1187,6 +1187,17 @@
           ]
         }
       ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [],
       "repeat": null,
       "repeatIteration": null,
       "repeatRowId": null,

@@ -28,4 +28,5 @@ grafana:
   links:
     - influxdb
   volumes:
+    - ./grafana.db:/var/lib/grafana/grafana.db:rw
     - ./freebox-grafana.json:/usr/share/grafana/dashboard/freebox-grafana.json:ro
