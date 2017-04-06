@@ -13,4 +13,4 @@ Test done on Freebox v5/crystal, not working with freebox revolution for now (a 
 $ docker-compose up
 ```
 
-Go To localhost:3000, wait 1 minute, and you should see your data :).
+Go To http://localhost:3000, wait 1 minute, and you should see your data :).
