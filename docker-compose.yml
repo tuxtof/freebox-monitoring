@@ -18,7 +18,12 @@ telegraf:
 grafana:
   image: grafana/grafana:latest
   container_name: grafana
+  environment:
+    - GF_DASHBOARDS_JSON_ENABLED=true
+    - GF_DASHBOARDS_JSON_PATH=dashboard/
   ports:
     - "3000:3000"
   links:
     - influxdb
+  volumes:
+    - ./freebox-grafana.json:/usr/share/grafana/dashboard/freebox-grafana.json:ro
