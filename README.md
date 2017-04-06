@@ -1,5 +1,4 @@
-[freebox-monitoring](https://github.com/tuxtof/freebox-monitoring)
-================
+# freebox-monitoring
 
 ![](https://raw.githubusercontent.com/tuxtof/freebox-monitoring/master/screenshot.png)
 
