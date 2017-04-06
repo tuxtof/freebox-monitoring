@@ -21,6 +21,8 @@ grafana:
   environment:
     - GF_DASHBOARDS_JSON_ENABLED=true
     - GF_DASHBOARDS_JSON_PATH=dashboard/
+    - GF_USERS_ALLOW_SIGN_UP=false
+    - GF_AUTH_ANONYMOUS_ENABLED=true
   ports:
     - "3000:3000"
   links:
