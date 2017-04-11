@@ -4,9 +4,6 @@
 
 Test done on Freebox v5/crystal, not working with freebox revolution for now (a new version is coming)
 
-### Prerequisites:
-- docker
-
 ### Usage
 
 ```
