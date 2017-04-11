@@ -71,6 +71,19 @@ for ligne in fbxinfo:
         debitconu = ligne.split()[6]
         break
 
+# Count number of connected device
+devices = 0
+count = False
+for ligne in fbxinfo:
+    ligne = ligne.decode("latin1")
+    if count and re.search(r'\d', ligne):
+        devices = devices + 1
+
+    if re.search(".*Attributions dhcp.*", ligne):
+        count = True #
+    elif re.search(".*Redirections de ports.*", ligne):
+        break
+
 print("freebox uptime=%i,version=\"%s\",state=\"%s\",proto=\"%s\""  % (uptime, version,state,proto))
 print("freebox,type=debit down=%s,up=%s" % (debitd,debitu))
 print("freebox,type=bruit down=%s,up=%s" % (bruitd, bruitu))
@@ -79,3 +92,4 @@ print("freebox,type=FEC down=%s,up=%s" % (fecd, fecu))
 print("freebox,type=CRC down=%s,up=%s" % (crcd, crcu))
 print("freebox,type=HEC down=%s,up=%s" % (hecd, hecu))
 print("freebox,type=journal down=%s,up=%s" % (debitcond, debitconu))
+print("freebox,type=devices nb=%s" % (devices))
