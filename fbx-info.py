@@ -2,17 +2,18 @@
 # -*- coding: utf-8 -*-
 # Author: @tuxtof
 
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 import re
 import sys
 
 try:
-    fbxinfo = urllib2.urlopen("http://mafreebox.freebox.fr/pub/fbx_info.txt")
-except urllib2.HTTPError as e:
-    print "Error %s" % (e.code)
+    fbxinfo = urllib.request.urlopen("http://mafreebox.freebox.fr/pub/fbx_info.txt")
+except urllib.error.HTTPError as e:
+    print("Error %s" % (e.code))
     sys.exit(1)
 
 for ligne in fbxinfo:
+    ligne = ligne.decode("latin1")
     if re.search(".*Version.*", ligne):
         version = ligne.split()[3]
     if re.search(".*mise en route.*", ligne):
@@ -34,6 +35,7 @@ for ligne in fbxinfo:
 
 
 for ligne in fbxinfo:
+    ligne = ligne.decode("latin1")
     if re.search(".*Etat.*", ligne):
         state = ligne.split()[1]
     if re.search(".*Protocole.*", ligne):
@@ -63,16 +65,31 @@ for ligne in fbxinfo:
 
 
 for ligne in fbxinfo:
+    ligne = ligne.decode("latin1")
     if re.search(".*Connexion.*", ligne):
         debitcond = ligne.split()[4]
         debitconu = ligne.split()[6]
         break
 
-print "freebox uptime=%i,version=\"%s\",state=\"%s\",proto=\"%s\""  % (uptime, version,state,proto)
-print "freebox,type=debit down=%s,up=%s" % (debitd,debitu)
-print "freebox,type=bruit down=%s,up=%s" % (bruitd, bruitu)
-print "freebox,type=attenuation down=%s,up=%s" % (attenuationd, attenuationu)
-print "freebox,type=FEC down=%s,up=%s" % (fecd, fecu)
-print "freebox,type=CRC down=%s,up=%s" % (crcd, crcu)
-print "freebox,type=HEC down=%s,up=%s" % (hecd, hecu)
-print "freebox,type=journal down=%s,up=%s" % (debitcond, debitconu)
+# Count number of connected device
+devices = 0
+count = False
+for ligne in fbxinfo:
+    ligne = ligne.decode("latin1")
+    if count and re.search(r'\d', ligne):
+        devices = devices + 1
+
+    if re.search(".*Attributions dhcp.*", ligne):
+        count = True #
+    elif re.search(".*Redirections de ports.*", ligne):
+        break
+
+print("freebox uptime=%i,version=\"%s\",state=\"%s\",proto=\"%s\""  % (uptime, version,state,proto))
+print("freebox,type=debit down=%s,up=%s" % (debitd,debitu))
+print("freebox,type=bruit down=%s,up=%s" % (bruitd, bruitu))
+print("freebox,type=attenuation down=%s,up=%s" % (attenuationd, attenuationu))
+print("freebox,type=FEC down=%s,up=%s" % (fecd, fecu))
+print("freebox,type=CRC down=%s,up=%s" % (crcd, crcu))
+print("freebox,type=HEC down=%s,up=%s" % (hecd, hecu))
+print("freebox,type=journal down=%s,up=%s" % (debitcond, debitconu))
+print("freebox,type=devices nb=%s" % (devices))

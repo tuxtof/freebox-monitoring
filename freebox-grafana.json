@@ -1,91 +1,18 @@
 {
-  "__inputs": [
-    {
-      "name": "DS_MON2-INFLUX",
-      "label": "mon2-influx",
-      "description": "",
-      "type": "datasource",
-      "pluginId": "influxdb",
-      "pluginName": "InfluxDB"
-    }
-  ],
-  "__requires": [
-    {
-      "type": "panel",
-      "id": "singlestat",
-      "name": "Singlestat",
-      "version": ""
-    },
-    {
-      "type": "panel",
-      "id": "graph",
-      "name": "Graph",
-      "version": ""
-    },
-    {
-      "type": "grafana",
-      "id": "grafana",
-      "name": "Grafana",
-      "version": "4.0.0-beta2"
-    },
-    {
-      "type": "datasource",
-      "id": "influxdb",
-      "name": "InfluxDB",
-      "version": "1.0.0"
-    }
-  ],
-  "id": null,
-  "title": "Freebox",
-  "tags": [],
-  "style": "dark",
-  "timezone": "browser",
-  "editable": false,
-  "sharedCrosshair": false,
-  "hideControls": true,
-  "time": {
-    "from": "now-3h",
-    "to": "now"
-  },
-  "timepicker": {
-    "refresh_intervals": [
-      "5s",
-      "10s",
-      "30s",
-      "1m",
-      "5m",
-      "15m",
-      "30m",
-      "1h",
-      "2h",
-      "1d"
-    ],
-    "time_options": [
-      "5m",
-      "15m",
-      "1h",
-      "6h",
-      "12h",
-      "24h",
-      "2d",
-      "7d",
-      "30d"
-    ]
-  },
-  "templating": {
-    "list": []
-  },
   "annotations": {
     "list": []
   },
-  "refresh": "1m",
-  "schemaVersion": 13,
-  "version": 27,
-  "links": [],
+  "editable": true,
   "gnetId": null,
+  "graphTooltip": 0,
+  "hideControls": false,
+  "id": 2,
+  "links": [],
+  "refresh": "1m",
   "rows": [
     {
-      "title": "Dashboard Row",
+      "collapse": false,
+      "height": 94,
       "panels": [
         {
           "cacheTimeout": null,
@@ -96,7 +23,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_MON2-INFLUX}",
+          "datasource": "freebox",
           "editable": true,
           "error": false,
           "format": "none",
@@ -185,7 +112,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_MON2-INFLUX}",
+          "datasource": "freebox",
           "editable": true,
           "error": false,
           "format": "none",
@@ -274,7 +201,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_MON2-INFLUX}",
+          "datasource": "freebox",
           "editable": true,
           "error": false,
           "format": "none",
@@ -363,7 +290,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_MON2-INFLUX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -445,21 +372,21 @@
           "valueName": "current"
         }
       ],
-      "showTitle": false,
-      "titleSize": "h6",
-      "height": 94,
       "repeat": null,
-      "repeatRowId": null,
       "repeatIteration": null,
-      "collapse": false
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
     },
     {
-      "title": "Dashboard Row",
+      "collapse": false,
+      "height": "230",
       "panels": [
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_MON2-INFLUX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -596,21 +523,21 @@
           ]
         }
       ],
-      "showTitle": false,
-      "titleSize": "h6",
-      "height": "230",
       "repeat": null,
-      "repeatRowId": null,
       "repeatIteration": null,
-      "collapse": false
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
     },
     {
-      "title": "Dashboard Row",
+      "collapse": false,
+      "height": "230",
       "panels": [
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_MON2-INFLUX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -713,7 +640,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Statistics Bruit / Atténuation",
+          "title": "Statistics Bruit / Attenuation",
           "tooltip": {
             "msResolution": false,
             "shared": true,
@@ -747,21 +674,21 @@
           ]
         }
       ],
-      "showTitle": false,
-      "titleSize": "h6",
-      "height": "230",
       "repeat": null,
-      "repeatRowId": null,
       "repeatIteration": null,
-      "collapse": false
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
     },
     {
-      "title": "Dashboard Row",
+      "collapse": false,
+      "height": 361,
       "panels": [
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_MON2-INFLUX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -934,7 +861,7 @@
         {
           "aliasColors": {},
           "bars": false,
-          "datasource": "${DS_MON2-INFLUX}",
+          "datasource": "freebox",
           "decimals": null,
           "editable": true,
           "error": false,
@@ -1224,13 +1151,61 @@
           ]
         }
       ],
-      "showTitle": false,
-      "titleSize": "h6",
-      "height": 361,
       "repeat": null,
-      "repeatRowId": null,
       "repeatIteration": null,
-      "collapse": false
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": 250,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
     }
-  ]
+  ],
+  "schemaVersion": 14,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-3h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "Freebox",
+  "version": 9
 }

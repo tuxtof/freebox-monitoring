@@ -1,0 +1,32 @@
+influxdb:
+  image: influxdb:latest
+  container_name: influxdb
+  ports:
+    - "8083:8083"
+    - "8086:8086"
+    - "8090:8090"
+
+telegraf:
+  image: telegraf:latest
+  container_name: telegraf
+  links:
+    - influxdb
+  volumes:
+    - ./freebox.conf:/etc/telegraf/telegraf.conf:ro
+    - ./fbx-info.py:/etc/telegraf/fbx-info.py:ro
+
+grafana:
+  image: grafana/grafana:latest
+  container_name: grafana
+  environment:
+    - GF_DASHBOARDS_JSON_ENABLED=true
+    - GF_DASHBOARDS_JSON_PATH=dashboard/
+    - GF_USERS_ALLOW_SIGN_UP=false
+    - GF_AUTH_ANONYMOUS_ENABLED=true
+  ports:
+    - "3000:3000"
+  links:
+    - influxdb
+  volumes:
+    - ./grafana.db:/var/lib/grafana/grafana.db:rw
+    - ./freebox-grafana.json:/usr/share/grafana/dashboard/freebox-grafana.json:ro
