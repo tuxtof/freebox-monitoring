@@ -12,7 +12,7 @@ Just run
 $ docker-compose up
 ```
 
-Go To http://localhost:3000, wait 1 minute, and you should see your data :).
+Go To http://localhost:3000/dashboard/file/freebox-grafana.json, wait 1 minute, and you should see your data :).
 
 ### Dependency:
 - telegraf
