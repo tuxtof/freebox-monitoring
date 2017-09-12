@@ -17,6 +17,7 @@ for ligne in fbxinfo:
     if re.search(".*Version.*", ligne):
         version = ligne.split()[3]
     if re.search(".*mise en route.*", ligne):
+        uptime = 0
         jour = re.search(r'(\d) jour', ligne)
         if jour is not None:
             jour = "%s*1440" % (jour.group(1))
